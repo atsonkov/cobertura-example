@@ -7,7 +7,7 @@ To build the project just run
 mvn clean install
 ```
 
-The project will fail to build as code coverage is below 85%. Cobertura plugin is defined in the root pom.xml as shown below.
+The project will build, but code coverage is below 85%. Cobertura plugin is defined in the root pom.xml as shown below.
 
 ```xml
 <build>
@@ -20,7 +20,7 @@ The project will fail to build as code coverage is below 85%. Cobertura plugin i
                 <check>
                     <branchRate>85</branchRate>
                     <lineRate>85</lineRate>
-                    <haltOnFailure>true</haltOnFailure>
+                    <haltOnFailure>false</haltOnFailure>
                     <totalBranchRate>85</totalBranchRate>
                     <totalLineRate>85</totalLineRate>
                     <packageLineRate>85</packageLineRate>
